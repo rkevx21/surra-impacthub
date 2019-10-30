@@ -35,6 +35,10 @@ const AuthStackNavigator = createStackNavigator({
   AddItem: {screen: AddItemScreen},
   TransactionHistory :{screen: TransactionHistoryScreen},
   Pickup: {screen: PickupScreen}
+},
+{
+  headerMode: 'none',
+
 });
 
 const AppNavigator = createSwitchNavigator({
