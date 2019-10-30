@@ -11,7 +11,7 @@ class TransactionHistory extends Component {
   render() {
     return (
       <ScrollView>
-        <TouchableOpacity onPress={()=> this.props.navigation.navigate('Login')}>
+        <TouchableOpacity onPress={()=> this.props.navigation.navigate('Pickup')}>
         <Text>Transaction History</Text>
         </TouchableOpacity>
         

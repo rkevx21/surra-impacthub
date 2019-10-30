@@ -5,6 +5,11 @@ const initialState = {
   date: null,
   address: null,
   time: null,
+  items:[
+    {id: 1, type:'Paper', weight:10},
+    {id: 1, type:'Glass', weight:3},
+    {id: 1, type:'Plastic', weight:2}
+  ],
   processing: false,
   refreshing: false,
 }
