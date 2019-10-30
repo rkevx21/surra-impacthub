@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, ScrollView, TouchableOpacity, TextInput, FlatList} from 'react-native';
+import {View, Text, ScrollView, TouchableOpacity, TextInput, FlatList, Image} from 'react-native';
 import {connect} from 'react-redux';
 
 
@@ -15,8 +15,9 @@ class Profile extends Component {
           
           <View>
           <Text style={{color:'#fff', fontSize:20, fontWeight:'bold'}}>Profile</Text>
+          <Image source={require('../../assets/ira.jpeg')}  style={{width:100, height:100, borderRadius:50, alignSelf:'center', marginTop:20}}/>
 
-          <Text style={{color:'#fff', fontWeight:'bold', marginTop:50}}>Personal Information</Text>
+          <Text style={{color:'#fff', fontWeight:'bold', marginTop:20}}>Personal Information</Text>
         <View
           style={{
             borderBottomColor: '#fff',
