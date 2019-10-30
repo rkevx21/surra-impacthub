@@ -18,13 +18,17 @@ class Dashboard extends Component {
           justifyContent: 'space-between',
           paddingVertical: 50,
         }}>
+           <TouchableOpacity onPress={()=> this.props.navigation.navigate('Profile')}>
         <View style={{alignItems: 'center'}}>
+         
           <Image
             source={require('../../assets/ira.jpeg')}
             style={{width: 66, height: 66, borderRadius: 33, marginBottom:10}}
           />
           <Text style={{color: '#fff'}}>Ira Allison Dimco</Text>
+          
         </View>
+        </TouchableOpacity>
 
         <View style={{alignItems:'center'}}>
           <Text style={{color: '#fff'}}>183 Points</Text>

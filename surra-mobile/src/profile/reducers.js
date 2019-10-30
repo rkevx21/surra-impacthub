@@ -1,9 +1,13 @@
 import PROFILE from './actionTypes';
 
 const initialState = {
-  name: null,
-  birthday: null,
-  addresses: [],
+  name: 'Ira Allison Dimco',
+  birthday: 'September 8, 1993',
+  addresses: [
+    {id: 1, address: '123 St. Name City'},
+    {id: 2, address: '456 St. Name City'},
+    {id: 3, address: '789 St. Name City'}
+  ],
   processing: false,
   refreshing: false,
 }
