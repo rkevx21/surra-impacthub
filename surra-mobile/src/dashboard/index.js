@@ -42,7 +42,7 @@ class Dashboard extends Component {
           <Text style={{color: '#fff'}}>Accumulated</Text>
         </View>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=> this.props.navigation.navigate('TransactionHistory')}>
           <Text style={{color: '#fff'}}>View Transactions</Text>
         </TouchableOpacity>
         <View
@@ -111,7 +111,7 @@ class Dashboard extends Component {
             }}>
             <Text style={{color: '#fff', padding:15}}>+ Add Items</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> this.props.navigation.navigate('Pickup')}>
             <Text
               style={{color: '#fff', textAlign: 'center', paddingVertical: 20}}>
               Request for pickup

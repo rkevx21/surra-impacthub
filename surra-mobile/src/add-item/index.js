@@ -65,7 +65,7 @@ class AddItem extends Component {
               alignItems: 'center',
             }}
             onPress={() =>
-              this.props.navigation.navigate('TransactionHistory')
+              this.props.navigation.goBack()
             }>
             <Text style={{color: '#fff', padding: 15}}>Submit</Text>
           </TouchableOpacity>

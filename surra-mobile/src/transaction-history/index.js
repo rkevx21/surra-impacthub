@@ -52,7 +52,7 @@ class TransactionHistory extends Component {
               alignItems: 'center',
             }}
             onPress={() =>
-              this.props.navigation.navigate('Pickup')
+              this.props.navigation.goBack()
             }>
             <Text style={{color: '#fff', padding: 15}}>Back</Text>
           </TouchableOpacity>
