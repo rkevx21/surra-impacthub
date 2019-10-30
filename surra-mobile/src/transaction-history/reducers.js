@@ -6,9 +6,9 @@ const initialState = {
   address: null,
   time: null,
   items:[
-    {id: 1, type:'Paper', weight:10, date:'', transactionNumber: '', collector: ''},
-    {id: 1, type:'Glass', weight:3, date:'', transactionNumber: '', collector: ''},
-    {id: 1, type:'Plastic', weight:2 , date:'', transactionNumber: '', collector: ''}
+    {id: 1, type:'Paper', weight:10, date:'October 23, 2019', transactionNumber: '1090241', collector: 'Juan dela Cruz'},
+    {id: 1, type:'Glass', weight:3, date:'October 24, 2019', transactionNumber: '1090242', collector: 'Juan dela Cruz'},
+    {id: 1, type:'Plastic', weight:2 , date:'October 25, 2019', transactionNumber: '1090243', collector: 'Juan dela Cruz'}
   ],
   processing: false,
   refreshing: false,

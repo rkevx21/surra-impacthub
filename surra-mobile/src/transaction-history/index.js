@@ -25,15 +25,18 @@ class TransactionHistory extends Component {
 
           <FlatList
             style={{marginTop:50}}
-            data={this.props.pickup.items}
+            data={this.props.history}
             keyExtractor={(item, index) => {
               return index + '';
             }}
             renderItem={({item, index}) => {
               return (
                 <View style={{borderBottomColor:'#849524', borderBottomWidth:1, paddingVertical:20}}>
+                  <Text  style={{color:'#fff'}}>Date: {item.date}</Text>
+                  <Text  style={{color:'#fff'}}>Transaction Number: {item.transactionNumber}</Text>
                   <Text style={{color:'#fff'}}>Type: {item.type}</Text>
                   <Text  style={{color:'#fff'}}>Weight: {item.weight}</Text>
+                  <Text  style={{color:'#fff'}}>Collector: {item.collector}</Text>
                 </View>
               );
             }}
@@ -49,9 +52,9 @@ class TransactionHistory extends Component {
               alignItems: 'center',
             }}
             onPress={() =>
-              this.props.navigation.navigate('TransactionHistory')
+              this.props.navigation.goBack()
             }>
-            <Text style={{color: '#fff', padding: 15}}>Submit</Text>
+            <Text style={{color: '#fff', padding: 15}}>Back</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -61,6 +64,7 @@ class TransactionHistory extends Component {
 
 const mapStateToProps = state => ({
   pickup: state.Pickup,
+  history: state.Transaction.items
 });
 
 const mapDispatchToProps = {};
