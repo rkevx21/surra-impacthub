@@ -12,6 +12,7 @@ import {
 import LoginScreen from './src/login';
 import VerificationScreen from './src/verification';
 import PickupPointScreen from './src/pickup-points';
+import MapScreen from './src/map';
 import { Provider } from 'react-redux';
 import store from './src/redux/store';
 import {createAppContainer,createSwitchNavigator} from 'react-navigation';
@@ -27,6 +28,7 @@ const PublicStackNavigator = createStackNavigator({
 
 const AuthStackNavigator = createStackNavigator({
 
+  Map: {screen: MapScreen},
   Verification :{screen: VerificationScreen},
   PickupPoint: {screen: PickupPointScreen}
 },

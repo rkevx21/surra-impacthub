@@ -10,28 +10,24 @@ import {
 } from 'react-native';
 import {connect} from 'react-redux';
 
-class PickupPoints extends Component {
+class Map extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     return (
-      <View style={{backgroundColor: '#A4B73B',
-      flex: 1,}}>
-        <TouchableOpacity style={{alignSelf:'flex-end'}} onPress={()=> this.props.navigation.navigate('Login')}>
-          <Text style={{color:'#fff', padding:20}}>Logout</Text>
-        </TouchableOpacity>
       <View
         style={{
-          
+          backgroundColor: '#A4B73B',
+          flex: 1,
           paddingHorizontal: 30,
           paddingTop: 100,
           justifyContent: 'space-between',
         }}>
         <View>
           <Text style={{color: '#fff', fontSize: 20, fontWeight: 'bold'}}>
-            Pick Up
+            MAP
           </Text>
 
           <View style={{marginTop:20}}>
@@ -54,30 +50,15 @@ class PickupPoints extends Component {
               alignItems: 'center',
             }}
             onPress={() =>
-              this.props.navigation.navigate('Map')
+              this.props.navigation.navigate('Verification')
             }>
-            <Text style={{color: '#fff', padding: 15}}>Accept</Text>
+            <Text style={{color: '#fff', padding: 15}}>Arrived</Text>
           </TouchableOpacity>
         </View>
 
-            <Text style={{color:'#fff', fontWeight:'bold', marginTop:50}}>Pickup Points</Text>
-          <FlatList
-            data={this.props.pickupPoints.items}
-            keyExtractor={(item, index) => {
-              return index + '';
-            }}
-            renderItem={({item, index}) => {
-              return (
-                <View style={{borderBottomColor:'#849524', borderBottomWidth:1, paddingVertical:20}}>
-                  <Text style={{color:'#fff'}}>Date: {item.date}</Text>
-                  <Text  style={{color:'#fff'}}>Transaction Number: {item.transactionNumber}</Text>
-                </View>
-              );
-            }}
-          />
+ 
         </View>
 
-      </View>
       </View>
     );
   }
@@ -94,4 +75,4 @@ const mapDispatchToProps = {};
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(PickupPoints);
+)(Map);

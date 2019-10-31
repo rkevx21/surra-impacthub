@@ -25,25 +25,34 @@ class Verification extends Component {
           paddingTop: 100,
           justifyContent: 'space-between',
         }}>
+          <Text style={{color: '#fff', fontSize: 20, fontWeight: 'bold'}}>
+            Verify
+          </Text>
+          <View style={{marginTop:20}}>
+            <Text>Date: {this.props.items[this.props.currentIndex].date}</Text>
+            <Text>Transaction Number: {this.props.items[this.props.currentIndex].transactionNumber}</Text>
+          </View>
         <View>
 
 
             <Text style={{color:'#fff', fontWeight:'bold', marginTop:50}}>Items</Text>
-          <FlatList
-            data={null}
-            keyExtractor={(item, index) => {
-              return index + '';
-            }}
-            renderItem={({item, index}) => {
-              return (
-                <View style={{borderBottomColor:'#849524', borderBottomWidth:1, paddingVertical:20}}>
-                  <Text style={{color:'#fff'}}>Type: {item.type}</Text>
-                  <Text  style={{color:'#fff'}}>Weight: {item.weight}</Text>
-                </View>
-              );
-            }}
-          />
+
         </View>
+        <View style={{height:400}}>
+        <FlatList data={this.props.items[this.props.currentIndex].items} renderItem={({item, index}) =>{
+          return <View style={{paddingVertical:10}}>
+            <Text>Type: {item.name}</Text>
+            <Text>Measurement: </Text>
+            <View style={{flexDirection:'row', alignItems:'center', borderBottomWidth:1, borderBottomColor:'#fff'}}>
+              <TextInput value={item.measurement + ""}  style={{flex:1}}/>
+              <Text>{item.unit}</Text>
+            </View>
+            
+          </View>
+        }} />
+        </View>
+
+        
         <View style={{paddingVertical: 30}}>
           <TouchableOpacity
             style={{
@@ -54,9 +63,9 @@ class Verification extends Component {
               alignItems: 'center',
             }}
             onPress={() =>
-              this.props.navigation.goBack()
+              this.props.navigation.navigate('PickupPoint')
             }>
-            <Text style={{color: '#fff', padding: 15}}>Submit</Text>
+            <Text style={{color: '#fff', padding: 15}}>Done</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -66,6 +75,8 @@ class Verification extends Component {
 
 const mapStateToProps = state => ({
   pickup: state.Pickup,
+  items: state.PickupPoint.items,
+  currentIndex: state.PickupPoint.currentIndex
 });
 
 const mapDispatchToProps = {};
