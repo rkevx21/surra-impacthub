@@ -18,6 +18,12 @@ class Dashboard extends Component {
           justifyContent: 'space-between',
           paddingVertical: 50,
         }}>
+          <View style={{alignSelf:'flex-end', marginRight:40}}>
+          <TouchableOpacity onPress={()=> this.props.navigation.navigate('Login')}>
+            <Text style={{color:'#fff'}}>Logout</Text>
+          </TouchableOpacity>
+          </View>
+         
            <TouchableOpacity onPress={()=> this.props.navigation.navigate('Profile')}>
         <View style={{alignItems: 'center'}}>
          
