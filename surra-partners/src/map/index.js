@@ -7,6 +7,7 @@ import {
   TextInput,
   TouchableOpacity,
   FlatList,
+  Image
 } from 'react-native';
 import {connect} from 'react-redux';
 
@@ -22,13 +23,10 @@ class Map extends Component {
           backgroundColor: '#A4B73B',
           flex: 1,
           paddingHorizontal: 30,
-          paddingTop: 100,
           justifyContent: 'space-between',
         }}>
-        <View>
-          <Text style={{color: '#fff', fontSize: 20, fontWeight: 'bold'}}>
-            MAP
-          </Text>
+
+          <Image source={require('../../assets/map.jpg')}  style={{marginHorizontal:-40, flex:1}}/>
 
           <View style={{marginTop:20}}>
             <Text style={{color:'#fff'}}>Transaction Number: {this.props.items[this.props.currentIndex].transactionNumber}</Text>
@@ -57,7 +55,6 @@ class Map extends Component {
         </View>
 
  
-        </View>
 
       </View>
     );
