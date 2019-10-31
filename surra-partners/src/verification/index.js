@@ -64,7 +64,7 @@ class Verification extends Component {
               alignItems: 'center',
             }}
             onPress={() =>
-              this.props.navigation.navigate('PickupPoint')
+              this.props.navigation.navigate('Success')
             }>
             <Text style={{color: '#fff', padding: 15}}>Done</Text>
           </TouchableOpacity>

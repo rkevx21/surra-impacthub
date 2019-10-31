@@ -18,6 +18,9 @@ export const select = payload =>{
   return {type: PICKUP_POINT.SELECT, payload: payload}
 }
 
+export const done = payload =>{
+  return {type: PICKUP_POINT.DONE, payload: payload}
+}
 
 
 // Thunk Actions
@@ -43,6 +46,12 @@ export const onAccept = payload =>{
 export const onSelect = payload =>{
   return dispatch => {
     dispatch(select(payload));
+  }
+}
+
+export const onDone = payload =>{
+  return dispatch => {
+    dispatch(done(payload));
   }
 }
 

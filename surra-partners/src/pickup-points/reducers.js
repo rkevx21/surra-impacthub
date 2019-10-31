@@ -78,6 +78,12 @@ const PickupPoint = (state = initialState, action) => {
       return temp;
     }
 
+    case PICKUP_POINTS.DONE: {
+      let temp = JSON.parse(JSON.stringify(state));
+      temp.items.splice(action.payload, 1) ;
+      return temp;
+    }
+
     default:
       return state;
   }

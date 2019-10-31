@@ -12,6 +12,7 @@ import {
 import LoginScreen from './src/login';
 import VerificationScreen from './src/verification';
 import PickupPointScreen from './src/pickup-points';
+import SuccessScreen from './src/success';
 import MapScreen from './src/map';
 import { Provider } from 'react-redux';
 import store from './src/redux/store';
@@ -28,9 +29,10 @@ const PublicStackNavigator = createStackNavigator({
 
 const AuthStackNavigator = createStackNavigator({
 
+  Success: {screen: SuccessScreen},
   Map: {screen: MapScreen},
   Verification :{screen: VerificationScreen},
-  PickupPoint: {screen: PickupPointScreen}
+  PickupPoint: {screen: PickupPointScreen},
 },
 {
   headerMode: 'none',
