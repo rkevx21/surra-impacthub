@@ -57,20 +57,21 @@ class AddItem extends Component {
             borderBottomWidth: 1,
             paddingVertical: 10,
           }}>
-          <TextInput placeholder="No. of pieces" />
+          <TextInput keyboardType='number-pad' placeholder="No. of pieces" onChangeText={(value) => this.setState({measurement: value})} />
         </View>
         </View>
         <View style={{paddingVertical: 30}}>
           <TouchableOpacity
+            disabled={this.state.type == null ? true: false}
             style={{
               width: '100%',
               borderRadius: 5,
-              backgroundColor: '#265D0C',
+              backgroundColor: this.state.type == null ? 'gray' :'#265D0C',
               justifyContent: 'center',
               alignItems: 'center',
             }}
             onPress={() =>{
-              this.props.add({type: this.state.type, item:''});
+              this.props.add({type: this.state.type, item:{measurement:this.state.measurement}});
               this.props.navigation.goBack();
             }
               

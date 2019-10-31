@@ -23,6 +23,7 @@ const initialState = {
     {id: 4, name:'Lorem ipsum dolor sit amet, consetetur sadipscing elitr',price:400},
     {id: 5, name:'Lorem ipsum dolor sit amet, consetetur sadipscing elitr',price:500},
   ],
+  percentage: 0,
   processing: false,
   refreshing: false,
 }

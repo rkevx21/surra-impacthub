@@ -37,7 +37,7 @@ class Dashboard extends Component {
           </TouchableOpacity>
         </View>
 
-        <PercentageCircle borderWidth={5} radius={90} percent={75} color={"#265D0C"} innerColor='#A4B73B' bgcolor='#849524' textStyle={{color:'#fff', fontSize:65}} ></PercentageCircle>
+        <PercentageCircle borderWidth={5} radius={90} percent={this.props.percentage} color={"#265D0C"} innerColor='#A4B73B' bgcolor='#849524' textStyle={{color:'#fff', fontSize:65}} ></PercentageCircle>
         <View>
           <Text style={{color: '#fff'}}>Accumulated</Text>
         </View>
@@ -127,7 +127,8 @@ const mapStateToProps = state => ({
   pickup: state.Pickup,
   plasticList: state.Recyclables.plasticList,
   paperList: state.Recyclables.paperList,
-  glassList: state.Recyclables.glassList
+  glassList: state.Recyclables.glassList,
+  percentage: state.Recyclables.percentage
 
 });
 
