@@ -36,16 +36,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function pickups()
-    {
-        return $this->hasMany(Pickup::class);
-    }
-
-    public function updateCreditAmount($data)
-    {
-        $this->user->credits->amount += $data['total'];
-
-        $this->user->credits->save();
-    }
 }
