@@ -30,9 +30,9 @@ class Verification extends Component {
             Verify
           </Text>
           <View style={{marginTop:20}}>
-            <Text>Date: {this.props.items[this.props.currentIndex].date}</Text>
-            <Text>Transaction Number: {this.props.items[this.props.currentIndex].transactionNumber}</Text>
-            <Text>Transaction Number: {this.props.items[this.props.currentIndex].authorizedPerson}</Text>
+            <Text style={{color:'#fff'}}>Date: {this.props.items[this.props.currentIndex].date}</Text>
+            <Text style={{color:'#fff'}}>Transaction Number: {this.props.items[this.props.currentIndex].transactionNumber}</Text>
+            <Text style={{color:'#fff'}}>Transaction Number: {this.props.items[this.props.currentIndex].authorizedPerson}</Text>
           </View>
         <View>
 
@@ -43,8 +43,8 @@ class Verification extends Component {
         <View style={{height:400}}>
         <FlatList data={this.props.items[this.props.currentIndex].items} renderItem={({item, index}) =>{
           return <View style={{paddingVertical:10}}>
-            <Text>Type: {item.name}</Text>
-            <Text>Measurement: </Text>
+            <Text  style={{color:'#fff'}}>Type: {item.name}</Text>
+            <Text style={{color:'#fff'}}>Measurement: </Text>
             <View style={{flexDirection:'row', alignItems:'center', borderBottomWidth:1, borderBottomColor:'#fff'}}>
               <TextInput keyboardType='number-pad'  style={{flex:1}} >{item.measurement}</TextInput>
               <Text>{item.unit}</Text>
