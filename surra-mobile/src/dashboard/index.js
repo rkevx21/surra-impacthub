@@ -62,7 +62,7 @@ class Dashboard extends Component {
             <View
               style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
               <Text style={{textAlign: 'center', color: '#fff', fontSize: 30}}>
-                {this.props.plasticList.length}
+                {this.props.plasticCount}
               </Text>
               <Text style={{textAlign: 'center', color: '#fff'}}>Plastics</Text>
             </View>
@@ -78,7 +78,7 @@ class Dashboard extends Component {
             <View
               style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
               <Text style={{textAlign: 'center', color: '#fff', fontSize: 30}}>
-                {this.props.glassList.length}
+                {this.props.glassCount}
               </Text>
               <Text style={{textAlign: 'center', color: '#fff'}}>Glass</Text>
             </View>
@@ -94,7 +94,7 @@ class Dashboard extends Component {
             <View
               style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
               <Text style={{textAlign: 'center', color: '#fff', fontSize: 30}}>
-                {this.props.paperList.length}
+                {this.props.paperCount}
               </Text>
               <Text style={{textAlign: 'center', color: '#fff'}}>Papers</Text>
             </View>
@@ -128,7 +128,11 @@ const mapStateToProps = state => ({
   plasticList: state.Recyclables.plasticList,
   paperList: state.Recyclables.paperList,
   glassList: state.Recyclables.glassList,
-  percentage: state.Recyclables.percentage
+  glassCount: state.Recyclables.glassCount,
+  plasticCount: state.Recyclables.plasticCount,
+  paperCount: state.Recyclables.paperCount,
+  percentage: state.Recyclables.percentage,
+  recyclables: state.Recyclables
 
 });
 
