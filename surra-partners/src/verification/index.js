@@ -9,6 +9,7 @@ import {
   FlatList,
 } from 'react-native';
 import {connect} from 'react-redux';
+import {on} from '../pickup-points/actions';
 
 class Verification extends Component {
   constructor(props) {
@@ -45,7 +46,7 @@ class Verification extends Component {
             <Text>Type: {item.name}</Text>
             <Text>Measurement: </Text>
             <View style={{flexDirection:'row', alignItems:'center', borderBottomWidth:1, borderBottomColor:'#fff'}}>
-              <TextInput value={item.measurement + ""}  style={{flex:1}}/>
+              <TextInput keyboardType='number-pad'  style={{flex:1}} >{item.measurement}</TextInput>
               <Text>{item.unit}</Text>
             </View>
             

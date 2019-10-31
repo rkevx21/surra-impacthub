@@ -72,7 +72,7 @@ class PickupPoints extends Component {
                     return (
                       <View>
                         <Text style={{color: '#fff'}}>
-                          {item.name} - {item.measurement} {item.unit}
+                          {item.name} : {item.measurement} {item.unit}
                         </Text>
                       </View>
                     );

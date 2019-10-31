@@ -33,7 +33,7 @@ class Map extends Component {
             <Text style={{color:'#fff'}}>Authorized Person: {this.props.items[this.props.currentIndex].authorizedPerson}</Text>
             <FlatList data={this.props.items[this.props.currentIndex].items} renderItem={({item,index}) =>{
               return <View>
-                <Text style={{color:'#fff'}} >{item.name} - {item.measurement} {item.unit}</Text>
+                <Text style={{color:'#fff'}} >{item.name} : {item.measurement} {item.unit}</Text>
   
               </View>
             }} />
