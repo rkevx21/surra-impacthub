@@ -62,7 +62,7 @@ class Dashboard extends Component {
             <View
               style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
               <Text style={{textAlign: 'center', color: '#fff', fontSize: 30}}>
-                20
+                {this.props.plasticList.length}
               </Text>
               <Text style={{textAlign: 'center', color: '#fff'}}>Plastics</Text>
             </View>
@@ -78,9 +78,9 @@ class Dashboard extends Component {
             <View
               style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
               <Text style={{textAlign: 'center', color: '#fff', fontSize: 30}}>
-                20
+                {this.props.glassList.length}
               </Text>
-              <Text style={{textAlign: 'center', color: '#fff'}}>Plastics</Text>
+              <Text style={{textAlign: 'center', color: '#fff'}}>Glass</Text>
             </View>
           </View>
           <View
@@ -94,9 +94,9 @@ class Dashboard extends Component {
             <View
               style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
               <Text style={{textAlign: 'center', color: '#fff', fontSize: 30}}>
-                20
+                {this.props.paperList.length}
               </Text>
-              <Text style={{textAlign: 'center', color: '#fff'}}>Plastics</Text>
+              <Text style={{textAlign: 'center', color: '#fff'}}>Papers</Text>
             </View>
           </View>
         </View>
@@ -125,6 +125,10 @@ class Dashboard extends Component {
 
 const mapStateToProps = state => ({
   pickup: state.Pickup,
+  plasticList: state.Recyclables.plasticList,
+  paperList: state.Recyclables.paperList,
+  glassList: state.Recyclables.glassList
+
 });
 
 const mapDispatchToProps = {};

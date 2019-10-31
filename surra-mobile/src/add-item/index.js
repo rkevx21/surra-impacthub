@@ -8,17 +8,19 @@ import {
   TextInput,
 } from 'react-native';
 import {connect} from 'react-redux';
+import {onAdd} from '../recyclables/actions';
+import RecyclableTypes from '../recyclables/recyclableTypes'; 
 
 class AddItem extends Component {
   constructor(props) {
     super(props);
+    this.state = {type: null, address:null, measurement: null};
   }
 
   render() {
     return (
       <View
         style={{backgroundColor: '#A4B73B', flex: 1, paddingHorizontal: 30, paddingTop:100, justifyContent:'space-between'}}>
-          
           <View>
           <Text style={{color:'#fff', fontSize:20, fontWeight:'bold'}}>Add Item</Text>
         <View
@@ -28,10 +30,13 @@ class AddItem extends Component {
             paddingVertical: 10,
             marginTop:20
           }}>
-          <Picker>
-            <Picker.Item label="Plastic" />
-            <Picker.Item label="Paper" />
-            <Picker.Item label="Glass" />
+          <Picker onValueChange={(value) =>{
+            this.setState({type: value})
+          }}>
+            <Picker.Item label="Select Type" value={null}/>
+            <Picker.Item label="Plastic" value={RecyclableTypes.PLASTIC}/>
+            <Picker.Item label="Paper" value={RecyclableTypes.PAPER} />
+            <Picker.Item label="Glass" value={RecyclableTypes.GLASS} />
           </Picker>
         </View>
         <View
@@ -64,8 +69,11 @@ class AddItem extends Component {
               justifyContent: 'center',
               alignItems: 'center',
             }}
-            onPress={() =>
-              this.props.navigation.goBack()
+            onPress={() =>{
+              this.props.add({type: this.state.type, item:''});
+              this.props.navigation.goBack();
+            }
+              
             }>
             <Text style={{color: '#fff', padding: 15}}>Submit</Text>
           </TouchableOpacity>
@@ -79,7 +87,9 @@ const mapStateToProps = state => ({
   pickup: state.Pickup,
 });
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+  add: payload => onAdd(payload)
+};
 
 export default connect(
   mapStateToProps,
