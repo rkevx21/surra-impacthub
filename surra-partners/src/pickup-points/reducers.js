@@ -11,10 +11,11 @@ const initialState = {
       lng: 0,
       authorizedPerson: 'Juan dela Cruz',
       items:[
-        {id: 1, name:'Plastics', measurement: 20, unit:'pc'},
-        {id: 2, name:'Paper', measurement: 30, unit:'kg'},
-        {id: 3, name:'Glass', measurement: 50, unit:'pc'}
-      ]
+        {id: 1, name:'Plastics', measurement: 50, unit:'pc'},
+        {id: 2, name:'Paper', measurement: 60, unit:'kg'},
+        {id: 3, name:'Glass', measurement: 5, unit:'pc'}
+      ],
+      maps:'map.jpg',
     },
     {
       id: 2,
@@ -25,10 +26,10 @@ const initialState = {
       lng: 0,
       authorizedPerson: 'Jane Smith',
       items:[
-        {id: 1, name:'Plastics', measurement: 20},
-        {id: 2, name:'Paper', measurement: 30},
-        {id: 3, name:'Glass', measurement: 50}
-      ]
+        {id: 1, name:'Plastics', measurement: 20, unit:'pc'},
+        {id: 2, name:'Paper', measurement: 30, unit:'kg'},
+        {id: 3, name:'Glass', measurement: 50, unit:'pc'}
+      ], maps: 'map2.jpg'
     },
     {
       id: 3,
@@ -39,10 +40,10 @@ const initialState = {
       lng: 0,
       authorizedPerson: 'John Doe',
       items:[
-        {id: 1, name:'Plastics', measurement: 20},
-        {id: 2, name:'Paper', measurement: 30},
-        {id: 3, name:'Glass', measurement: 50}
-      ]
+        {id: 1, name:'Plastics', measurement: 10, unit:'pc'},
+        {id: 2, name:'Paper', measurement: 12, unit:'kg'},
+        {id: 3, name:'Glass', measurement: 15, unit:'pc'}
+      ], maps:'map3.png'
     },
   ],
   currentIndex: 0,

@@ -31,6 +31,7 @@ class Verification extends Component {
           <View style={{marginTop:20}}>
             <Text>Date: {this.props.items[this.props.currentIndex].date}</Text>
             <Text>Transaction Number: {this.props.items[this.props.currentIndex].transactionNumber}</Text>
+            <Text>Transaction Number: {this.props.items[this.props.currentIndex].authorizedPerson}</Text>
           </View>
         <View>
 
