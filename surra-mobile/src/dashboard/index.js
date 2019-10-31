@@ -38,7 +38,7 @@ class Dashboard extends Component {
 
         <View style={{alignItems:'center'}}>
           <Text style={{color: '#fff'}}>183 Points</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> this.props.navigation.navigate('QR')}>
             <Text style={{color: '#fff'}}>Use Credits</Text>
           </TouchableOpacity>
         </View>

@@ -20,6 +20,7 @@ import AddItemScreen from './src/add-item';
 import TransactionHistoryScreen from './src/transaction-history';
 import PickupScreen from './src/pickup';
 import LoginScreen from './src/login';
+import QrScreen from './src/qr';
 
 const PublicStackNavigator = createStackNavigator({
   Login: {screen: LoginScreen},
@@ -34,7 +35,8 @@ const AuthStackNavigator = createStackNavigator({
   Profile: {screen: ProfileScreen},
   AddItem: {screen: AddItemScreen},
   TransactionHistory :{screen: TransactionHistoryScreen},
-  Pickup: {screen: PickupScreen}
+  Pickup: {screen: PickupScreen},
+  QR: {screen: QrScreen}
 },
 {
   headerMode: 'none',
